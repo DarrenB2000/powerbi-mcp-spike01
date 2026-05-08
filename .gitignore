@@ -1,0 +1,21 @@
+# VS Code workspace settings -- keep only the MCP server config
+.vscode/*
+!.vscode/mcp.json
+
+# Output and generated files
+out/
+*.preview.html
+
+# Environment files -- keep only the example
+.env*
+!.env.example
+
+# macOS and Windows OS artefacts
+.DS_Store
+Thumbs.db
+desktop.ini
+ehthumbs.db
+
+# Per-user persisted state -- never commit these
+*.local.json
+config/auth-state.local.json

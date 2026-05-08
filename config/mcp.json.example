@@ -1,0 +1,30 @@
+// VS Code workspace MCP configuration
+// Place this file at .vscode/mcp.json (relative to your project root).
+// VS Code uses the root key "servers" (verified: code.visualstudio.com/docs/copilot/reference/mcp-configuration).
+// Requires VS Code 1.99 or later and GitHub Copilot Chat extension.
+//
+// The powerbi-modeling-mcp server runs locally via npx (Node.js required).
+// --readonly prevents any write operations to the connected semantic model.
+// Remove --readonly and add --skipconfirmation to enable confirmed writes.
+//
+// The powerbi-remote server uses the hosted HTTP endpoint.
+// Tenant setting "Users can use the Power BI Model Context Protocol server endpoint (preview)"
+// must be enabled by a Fabric administrator before the remote server will accept connections.
+{
+  "servers": {
+    "powerbi-modeling-mcp": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@microsoft/powerbi-modeling-mcp@latest",
+        "--start",
+        "--readonly"
+      ]
+    },
+    "powerbi-remote": {
+      "type": "http",
+      "url": "https://api.fabric.microsoft.com/v1/mcp/powerbi"
+    }
+  }
+}

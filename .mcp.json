@@ -1,0 +1,27 @@
+// Claude Code project-level MCP configuration
+// Place this file at .mcp.json in the project root (the directory where Claude Code is invoked).
+// Claude Code uses the root key "mcpServers" (verified: docs.anthropic.com/en/docs/claude-code/mcp).
+//
+// To add these servers via CLI instead of editing this file directly, run:
+//   claude mcp add --scope project --transport stdio powerbi-modeling-mcp -- npx -y @microsoft/powerbi-modeling-mcp@latest --start --readonly
+//   claude mcp add --scope project --transport http powerbi-remote https://api.fabric.microsoft.com/v1/mcp/powerbi
+//
+// Claude Code reads CLAUDE.md from the project root automatically on every session.
+// Copy config/copilot-instructions.md content to CLAUDE.md to apply standing instructions.
+{
+  "mcpServers": {
+    "powerbi-modeling-mcp": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@microsoft/powerbi-modeling-mcp@latest",
+        "--start",
+        "--readonly"
+      ]
+    },
+    "powerbi-remote": {
+      "type": "http",
+      "url": "https://api.fabric.microsoft.com/v1/mcp/powerbi"
+    }
+  }
+}

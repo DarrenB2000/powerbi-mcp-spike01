@@ -1,0 +1,19 @@
+{
+  "_comment": "Template file. The user-specific catalog is written to config/semantic-model-ids.local.json by Select-Workspace.ps1 (and the localPbix section by Get-OpenPbixModel.ps1). The local file is gitignored. Do not add real workspace or model IDs to this committed template.",
+  "models": [
+    {
+      "name": "Example Model A",
+      "description": "Replace with your semantic model name and description",
+      "workspaceId": "00000000-0000-0000-0000-000000000000",
+      "modelId": "00000000-0000-0000-0000-000000000000",
+      "environment": "development"
+    },
+    {
+      "name": "Example Model B",
+      "description": "Replace with your semantic model name and description",
+      "workspaceId": "00000000-0000-0000-0000-000000000000",
+      "modelId": "00000000-0000-0000-0000-000000000000",
+      "environment": "production"
+    }
+  ]
+}

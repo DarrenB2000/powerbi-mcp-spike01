@@ -1,0 +1,45 @@
+{
+  "_comment": "Expected Gold schema for lineage validation (scenario 02). Replace these placeholder view definitions with the actual views from your data platform. The Measure-AutomatedChecks script and scenario-02-lineage-check scenario use this file to detect broken references and orphan columns.",
+  "views": [
+    {
+      "name": "vw_sales_fact",
+      "columns": [
+        { "name": "SalesOrderKey", "type": "int64",    "nullable": false },
+        { "name": "DateKey",        "type": "int64",    "nullable": false },
+        { "name": "CustomerKey",    "type": "int64",    "nullable": false },
+        { "name": "ProductKey",     "type": "int64",    "nullable": false },
+        { "name": "SalesAmount",    "type": "decimal",  "nullable": true  },
+        { "name": "Quantity",       "type": "int64",    "nullable": true  }
+      ]
+    },
+    {
+      "name": "vw_customer_dim",
+      "columns": [
+        { "name": "CustomerKey",  "type": "int64",  "nullable": false },
+        { "name": "CustomerName", "type": "string", "nullable": true  },
+        { "name": "Country",      "type": "string", "nullable": true  },
+        { "name": "Region",       "type": "string", "nullable": true  }
+      ]
+    },
+    {
+      "name": "vw_product_dim",
+      "columns": [
+        { "name": "ProductKey",   "type": "int64",  "nullable": false },
+        { "name": "ProductName",  "type": "string", "nullable": true  },
+        { "name": "Category",     "type": "string", "nullable": true  },
+        { "name": "SubCategory",  "type": "string", "nullable": true  }
+      ]
+    },
+    {
+      "name": "vw_date_dim",
+      "columns": [
+        { "name": "DateKey",    "type": "int64",    "nullable": false },
+        { "name": "Date",       "type": "dateTime", "nullable": false },
+        { "name": "Year",       "type": "int64",    "nullable": true  },
+        { "name": "Month",      "type": "int64",    "nullable": true  },
+        { "name": "Quarter",    "type": "string",   "nullable": true  },
+        { "name": "MonthName",  "type": "string",   "nullable": true  }
+      ]
+    }
+  ]
+}
