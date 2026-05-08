@@ -147,12 +147,17 @@ endpoint. Prints PASS, WARN, or FAIL for each check and exits with a count of FA
 
 ## Demo scenarios
 
-| Scenario | Description | File |
-|---|---|---|
-| 01 -- Discovery | Generate read-only documentation of a semantic model including an erDiagram, table inventory, measure listing, and RLS summary | [scenarios/scenario-01-discovery.md](scenarios/scenario-01-discovery.md) |
-| 02 -- Lineage check | Compare the semantic model columns against `config/expected-gold-schema.json` to surface broken references, orphan columns, and upstream additions | [scenarios/scenario-02-lineage-check.md](scenarios/scenario-02-lineage-check.md) |
+| Scenario | Description | Write | File |
+|---|---|---|---|
+| 01 -- Discovery | Generate read-only documentation of a semantic model including an erDiagram, table inventory, measure listing, and RLS summary | No | [scenarios/scenario-01-discovery.md](scenarios/scenario-01-discovery.md) |
+| 02 -- Lineage check | Compare the semantic model columns against `config/expected-gold-schema.json` to surface broken references, orphan columns, and upstream additions | No | [scenarios/scenario-02-lineage-check.md](scenarios/scenario-02-lineage-check.md) |
+| 03 -- Quality audit | Inspect the model for common anti-patterns (missing descriptions, format strings, isolated tables, orphan keys) and produce a prioritized report with HIGH / MEDIUM / LOW severities | No | [scenarios/scenario-03-quality-audit.md](scenarios/scenario-03-quality-audit.md) |
+| 04 -- Bulk descriptions | Add plain-English descriptions to all undocumented measures using the `--readwrite` server mode, with explicit user confirmation and the MCP elicitation gate before any write | Yes | [scenarios/scenario-04-bulk-descriptions.md](scenarios/scenario-04-bulk-descriptions.md) |
 
-Both scenarios can target either the local PBIX file (via the Modeling MCP) or a published
+Scenarios 01, 02, and 03 use `--readonly` and are safe to run against any model. Scenario 04
+uses `--readwrite` and should be run against a test copy of the PBIX, not a production file.
+
+All scenarios can target either the local PBIX file (via the Modeling MCP) or a published
 workspace model (via the Remote MCP). Configure the active source using `Get-OpenPbixModel.ps1`
 or `Select-Workspace.ps1` before starting a scenario.
 

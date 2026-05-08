@@ -175,6 +175,35 @@ counts apply to GitHub Copilot only (check the Copilot quota dashboard after eac
 | No write tools called | `<TBD>` | `<TBD>` |
 | Notes | | |
 
+### Scenario 03 -- Model quality audit
+
+| Field | Copilot (VS Code) | Claude Code |
+|---|---|---|
+| Model used | `<TBD>` | `<TBD>` |
+| Wall-clock time | `<TBD: see scenarios/scenario-03-quality-audit.md and record after running>` | `<TBD>` |
+| Premium requests consumed | `<TBD: check Copilot quota dashboard>` | N/A |
+| HIGH issues found | `<TBD>` | `<TBD>` |
+| MEDIUM issues found | `<TBD>` | `<TBD>` |
+| LOW issues found | `<TBD>` | `<TBD>` |
+| Findings accurate | `<TBD>` | `<TBD>` |
+| No write tools called | `<TBD>` | `<TBD>` |
+| Notes | | |
+
+### Scenario 04 -- Bulk measure description enrichment
+
+| Field | Copilot (VS Code) | Claude Code |
+|---|---|---|
+| Model used | `<TBD>` | `<TBD>` |
+| Wall-clock time | `<TBD: see scenarios/scenario-04-bulk-descriptions.md and record after running>` | `<TBD>` |
+| Premium requests consumed | `<TBD: check Copilot quota dashboard>` | N/A |
+| Measures updated | `<TBD>` | `<TBD>` |
+| Change list shown before writing | `<TBD>` | `<TBD>` |
+| Elicitation gate activated | `<TBD>` | `<TBD>` |
+| Descriptions accurate | `<TBD>` | `<TBD>` |
+| No unintended overwrites | `<TBD>` | `<TBD>` |
+| Config reverted to --readonly after | `<TBD>` | `<TBD>` |
+| Notes | | |
+
 ### Model inventory (from Get-OpenPbixModel.ps1 or Select-Workspace.ps1)
 
 | Property | Value |
